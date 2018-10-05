@@ -13,6 +13,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * @author canghai
+     * @param openid
+     * @return UserInfo
+     */
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public UserInfo loginByOpenId(String openid){
         return userService.getUserInfo(openid);
